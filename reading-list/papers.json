@@ -415,12 +415,57 @@
   },
   {
     "group": "人形",
+    "title": "BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning",
+    "venue": null,
+    "year": 2025,
+    "notes": "以 Forward-Backward 无监督强化学习学习统一潜变量空间，使同一个 G1 策略可通过运动、目标或奖励提示完成零样本推理，并支持少样本优化适配与 sim-to-real。",
+    "query": "BFM-Zero Promptable Behavioral Foundation Model Humanoid Control 2025",
+    "url": "https://arxiv.org/pdf/2511.04131.pdf"
+  },
+  {
+    "group": "人形",
+    "title": "TWIST: Teleoperated Whole-Body Imitation System",
+    "venue": "CoRL",
+    "year": 2025,
+    "notes": "以动作重定向和 RL+BC 教师-学生训练构建 G1 全身遥操作系统，用单一控制器覆盖移动、操作和表现性动作。",
+    "query": "TWIST Teleoperated Whole-Body Imitation System CoRL 2025",
+    "url": "https://arxiv.org/pdf/2505.02833.pdf"
+  },
+  {
+    "group": "人形",
+    "title": "Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking",
+    "venue": "ICRA",
+    "year": 2026,
+    "notes": "系统研究动作重定向质量对人形运动跟踪策略的影响，并提出 GMR；在减少奖励工程的设置下，GMR 的跟踪鲁棒性与动作保真度优于其他开源重定向方法。",
+    "query": "Retargeting Matters General Motion Retargeting Humanoid Motion Tracking ICRA 2026",
+    "url": "https://arxiv.org/pdf/2510.02252.pdf"
+  },
+  {
+    "group": "人形",
+    "title": "TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System",
+    "venue": null,
+    "year": 2025,
+    "notes": "使用 PICO VR 构建便携、无光学动捕的全身遥操作与数据采集系统，并以第一视角数据训练分层视觉运动策略。",
+    "query": "TWIST2 Scalable Portable Holistic Humanoid Data Collection System 2025",
+    "url": "https://arxiv.org/pdf/2511.02832.pdf"
+  },
+  {
+    "group": "人形",
     "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
     "venue": null,
     "year": 2026,
     "notes": "提出联合预测动作与内部未来状态轨迹的扩散策略，仅使用本体感知，并将文本条件生成与测试时状态目标引导统一到单一闭环控制策略中。无需独立的运动跟踪器或特权全身状态；在 Jetson Orin NX 上满足 20 ms 控制周期，并在 Unitree G1 上实现文本指令、摇杆控制、语义插值和扰动响应。",
     "query": "PredActor Predictive Action Diffusion Steerable Onboard Humanoid Control 2026",
     "url": "https://arxiv.org/pdf/2609.24840.pdf"
+  },
+  {
+    "group": "框架与工具",
+    "title": "mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning",
+    "venue": null,
+    "year": 2026,
+    "notes": "将 Isaac Lab 的 manager-based API 与 MuJoCo Warp GPU 仿真结合，提供轻量、可组合的机器人学习环境以及速度跟踪、运动模仿和操作参考任务。",
+    "query": "mjlab Lightweight Framework GPU-Accelerated Robot Learning 2026",
+    "url": "https://arxiv.org/pdf/2601.22074.pdf"
   },
   {
     "group": "ETH-RSL",

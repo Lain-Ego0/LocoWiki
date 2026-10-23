@@ -11,5 +11,7 @@ GMR 的特点是可在 CPU 上实时运行，适合与动作捕捉、遥操作�
 ## 相关链接
 
 - [GitHub 仓库](https://github.com/YanjieZe/GMR)
+- [论文：Retargeting Matters](https://arxiv.org/abs/2510.02252)
+- [项目主页](https://jaraujo98.github.io/retargeting_matters/)
 - [TWIST 全身模仿系统](https://github.com/YanjieZe/TWIST)
 - [GMR 文档](https://github.com/YanjieZe/GMR/blob/master/DOC.md)

@@ -12,6 +12,7 @@ This folder is the unified entry for the paper module: technical-direction index
   - [KAIST](#kaist)
   - [Other Works](#other-works)
   - [Humanoids](#humanoids)
+  - [Frameworks and Tools](#frameworks)
   - [Surveys](#surveys)
   - [Misc (no notes yet)](#misc)
 
@@ -94,7 +95,7 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 - Visual Whole-Body Control for Legged Loco-Manipulation (CoRL 2024) — [Original PDF](https://arxiv.org/pdf/2403.16967.pdf)
 - Curiosity-Driven Learning of Joint Locomotion and Manipulation Tasks (CoRL 2023) — [Original PDF](https://proceedings.mlr.press/v229/schwarke23a/schwarke23a.pdf) (open access via PMLR)
 
-### Humanoids (Whole-body / Teleop / Getting-up / Generative)
+### Humanoids (Whole-body / Behavioral Foundation Models / Teleop / Retargeting / Data Collection / Getting-up / Generative)
 - Perpetual Humanoid Control for Real-time Simulated Avatars (ICCV 2023) — [Original PDF](https://arxiv.org/pdf/2305.06456.pdf)
 - Expressive Whole-Body Control for Humanoid Robots (RSS 2024) — [Original PDF](https://arxiv.org/pdf/2402.16796.pdf)
 - ExBody2: Advanced Expressive Humanoid Whole-Body Control (2024) — [Original PDF](https://arxiv.org/pdf/2412.13196.pdf)
@@ -105,9 +106,16 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 - Learning Humanoid Standing-up Control across Diverse Postures (RSS 2025) — [Original PDF](https://arxiv.org/pdf/2502.08378)
 - Learning Getting-Up Policies for Real-World Humanoid Robots (RSS 2025) — [Original PDF](https://arxiv.org/pdf/2502.12152)
 - BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion (2025) — [Original PDF](https://arxiv.org/pdf/2508.08241)
+- BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning (2025) — [Original PDF](https://arxiv.org/pdf/2511.04131.pdf)
+- TWIST: Teleoperated Whole-Body Imitation System (CoRL 2025) — [Original PDF](https://arxiv.org/pdf/2505.02833.pdf)
+- Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking (ICRA 2026) — [Original PDF](https://arxiv.org/pdf/2510.02252.pdf)
+- TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System (2025) — [Original PDF](https://arxiv.org/pdf/2511.02832.pdf)
 - Global-Local Attention Decomposition for Terrain Encoding in Humanoid Perceptive Locomotion (arXiv 2026) — [Original page](https://arxiv.org/abs/2606.00637)
 - Extreme-RGMT: Continual Learning of Highly Dynamic Skills for Robust Generalist Humanoid Control (arXiv 2026) — [Original page](https://arxiv.org/abs/2607.20110)
 - PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control (2026) — [Original PDF](https://arxiv.org/pdf/2609.24840.pdf)
+
+### Simulation / Robot-Learning Frameworks
+- mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning (2026) — [Original PDF](https://arxiv.org/pdf/2601.22074.pdf)
 
 ### Hardware
 - A Low Cost Modular Actuator for Dynamic Robots — [Original PDF](https://dspace.mit.edu/handle/1721.1/118671)
@@ -245,7 +253,7 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 - Original PDF: [Original source](https://arxiv.org/pdf/2104.02180.pdf) - Notes: Not a legged-robot paper, but highly transferable: uses a GAN-based implicit metric to provide style rewards for learning control policies (UCB).
 
 <a id="humanoids" name="humanoids"></a>
-### Humanoids (Whole-Body Control / Teleop / Getting-Up, etc.)
+### Humanoids (Whole-Body Control / Behavioral Foundation Models / Teleop / Retargeting / Data Collection / Getting-Up, etc.)
 
 #### Perpetual Humanoid Control for Real-time Simulated Avatars (ICCV 2023)
 - Original PDF: https://arxiv.org/pdf/2305.06456.pdf
@@ -308,9 +316,37 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 #### PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control (arXiv 2026)
 - Original page: [Original source](https://arxiv.org/abs/2609.24840) - Notes: Directly generates executable actions while predicting future states for text conditioning and test-time guidance; validated on a Unitree G1 humanoid.
 
+#### BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning (2025)
+- Original PDF: https://arxiv.org/pdf/2511.04131.pdf
+- Notes: Uses Forward-Backward unsupervised RL to learn a shared latent space, allowing one G1 policy to accept motion, goal, or reward prompts for zero-shot inference and few-shot optimization-based adaptation.
+- Open-source project: [BFM-Zero](../network-open-source/paper-reproductions/bfm-zero.md)
+
+#### TWIST: Teleoperated Whole-Body Imitation System (CoRL 2025)
+- Original PDF: https://arxiv.org/pdf/2505.02833.pdf
+- Notes: Combines motion retargeting with RL+BC teacher-student training for G1 whole-body teleoperation; one controller covers locomotion, whole-body manipulation, and expressive motion.
+- Open-source project: [TWIST](../network-open-source/paper-reproductions/twist.md)
+
+#### Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking (ICRA 2026)
+- Original PDF: https://arxiv.org/pdf/2510.02252.pdf
+- Notes: Systematically studies retargeting quality as a driver of motion-tracking policy performance and proposes GMR, which improves robustness and motion fidelity over other open-source methods with limited reward engineering.
+- Open-source project: [GMR](../network-open-source/paper-reproductions/gmr.md)
+
+#### TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System (2025)
+- Original PDF: https://arxiv.org/pdf/2511.02832.pdf
+- Notes: Uses PICO VR for portable, mocap-free whole-body teleoperation and data collection, then trains a hierarchical visuomotor policy from egocentric demonstrations.
+- Open-source project: [TWIST2](../network-open-source/paper-reproductions/twist2.md)
+
 #### PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control (2026)
 - Original PDF: https://arxiv.org/pdf/2609.24840.pdf
 - Notes: Jointly predicts executable actions and an internal future-state trajectory using only proprioception, unifying text-conditioned generation and test-time state guidance in one closed-loop policy without a separate motion tracker or privileged body states. It meets a 20 ms control period on Jetson Orin NX and demonstrates text commands, joystick control, semantic interpolation, and disturbance response on Unitree G1.
+
+<a id="frameworks" name="frameworks"></a>
+### Frameworks and Tools
+
+#### mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning (2026)
+- Original PDF: https://arxiv.org/pdf/2601.22074.pdf
+- Notes: Combines Isaac Lab's manager-based API with MuJoCo Warp GPU simulation, providing lightweight, composable environments and reference tasks for velocity tracking, motion imitation, and manipulation.
+- Open-source project: [mjlab](../network-open-source/development-tools/mjlab.md)
 
 <a id="surveys" name="surveys"></a>
 ### Surveys

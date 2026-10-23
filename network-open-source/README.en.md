@@ -42,41 +42,51 @@ This page is the open-source resource index. Complete competition solutions, cor
 
 ## Project Articles
 
-The project articles are grouped by their primary purpose.
+Project articles are grouped by their main deliverable: new methods and reproduction experiments belong under “Paper and Algorithm Reproductions”; reusable training, simulation, and deployment capabilities belong under “Development Tools and Frameworks”; and integrated robots, team projects, and competition solutions belong under “Projects and Competition Solutions.” When a project spans multiple areas, it is classified by its primary use and cross-linked to related repositories in the article.
 
 ### Paper and Algorithm Reproductions
 
-| Project | Entry | Summary |
-| :--- | :--- | :--- |
-| [Extreme-RGMT Reproduction](paper-reproductions/extreme-rgmt-reproduction.md) | [Project Page](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) | Humanoid whole-body control for highly dynamic skills, including backflips and recovery |
-| [SMP Score-Matching Motion Priors](paper-reproductions/smp-score-matching-motion-priors.md) | [GitHub](https://github.com/SUZ-tsinghua/smp) | Uses a frozen diffusion model as a reusable motion reward for Unitree G1 |
-| [AMP Go2 Basics](paper-reproductions/amp-go2.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | Go2 AMP training, motion data, Sim2Sim, and Sim2Real workflow |
-| [AMP Go2 Stairs Experiment](paper-reproductions/go2-amp-stairs.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | AMP-based Go2 stair-terrain reproduction experiment |
-| [M20 DreamWaQ High Platform](paper-reproductions/m20-dreamwaq-highplatform.md) | [GitHub](https://github.com/yusongmin1/Dreamwaq/tree/highplatform) | Curriculum-trained vision-free high-platform climbing for M20 |
-| [Go2 Controllable Jump](paper-reproductions/go2-controllable-jump.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | Compares high-acceleration jumping across Isaac Gym, MuJoCo, and hardware |
-| [Go2 Flip Data Collection](paper-reproductions/go2-flip-data-collection.md) | [GitHub](https://github.com/yusongmin1/go2_flip_TO) | Generates Go2 flip motions with SE(3) whole-body trajectory optimization |
-| [Go2 Trot Gait Control](paper-reproductions/go2-trot-gait-control.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | Controls trot frequency and 10/20 cm foot-clearance settings |
-| [Go2 Plum-Blossom Parkour](paper-reproductions/go2-plum-blossom-parkour.md) | [GitHub](https://github.com/jindadu00/legged_robot_competition) | Isaac Gym curriculum-learning experiment for complex terrain |
+| Subcategory | Project | Entry | Summary |
+| :--- | :--- | :--- | :--- |
+| Dynamic humanoid control | [Extreme-RGMT Reproduction](paper-reproductions/extreme-rgmt-reproduction.md) | [Project Page](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) | Humanoid whole-body control for highly dynamic skills, including backflips and recovery |
+| Humanoid motion priors | [SMP Score-Matching Motion Priors](paper-reproductions/smp-score-matching-motion-priors.md) | [GitHub](https://github.com/SUZ-tsinghua/smp) | Uses a frozen diffusion model as a reusable motion reward for Unitree G1 |
+| Quadruped imitation learning | [AMP Go2 Basics](paper-reproductions/amp-go2.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | Go2 AMP training, motion data, Sim2Sim, and Sim2Real workflow |
+| Quadruped imitation learning | [AMP Go2 Stairs Experiment](paper-reproductions/go2-amp-stairs.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | AMP-based Go2 stair-terrain reproduction experiment |
+| Quadruped locomotion | [M20 DreamWaQ High Platform](paper-reproductions/m20-dreamwaq-highplatform.md) | [GitHub](https://github.com/yusongmin1/Dreamwaq/tree/highplatform) | Curriculum-trained vision-free high-platform climbing for M20 |
+| Quadruped locomotion | [Go2 Controllable Jump](paper-reproductions/go2-controllable-jump.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | Compares high-acceleration jumping across Isaac Gym, MuJoCo, and hardware |
+| Trajectory optimization and data generation | [Go2 Flip Data Collection](paper-reproductions/go2-flip-data-collection.md) | [GitHub](https://github.com/yusongmin1/go2_flip_TO) | Generates Go2 flip motions with SE(3) whole-body trajectory optimization |
+| Quadruped locomotion | [Go2 Trot Gait Control](paper-reproductions/go2-trot-gait-control.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | Controls trot frequency and 10/20 cm foot-clearance settings |
+| Quadruped parkour | [Go2 Plum-Blossom Parkour](paper-reproductions/go2-plum-blossom-parkour.md) | [GitHub](https://github.com/jindadu00/legged_robot_competition) | Isaac Gym curriculum-learning experiment for complex terrain |
+| Behavioral foundation models | [BFM-Zero](paper-reproductions/bfm-zero.md) | [GitHub](https://github.com/LeCAR-Lab/BFM-Zero) | Promptable humanoid behavior foundation model for motion, goal, and reward inference |
+| Whole-body teleoperation and imitation | [TWIST](paper-reproductions/twist.md) | [GitHub](https://github.com/YanjieZe/TWIST) | Unitree G1 whole-body teleoperation with teacher-student imitation learning |
+| Motion retargeting | [GMR](paper-reproductions/gmr.md) | [GitHub](https://github.com/YanjieZe/GMR) | CPU-real-time general motion retargeting for multiple humanoid embodiments |
+| Teleoperation and data collection | [TWIST2](paper-reproductions/twist2.md) | [GitHub](https://github.com/amazon-far/TWIST2) | Scalable VR-based whole-body humanoid data-collection system |
 
 ### Development Tools and Frameworks
 
-| Project | Entry | Summary |
-| :--- | :--- | :--- |
-| [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender exporter for MuJoCo heightfields, meshes, and collision bodies |
-| [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | Extends legged_gym across Isaac Gym, Genesis, and Isaac Sim |
-| [Go2 Depth-Image Parkour](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | Go2 depth-image task example from LeggedGym-Ex |
-| [LeggedSkillDeploy](development-tools/leggedskilldeploy.md) | [GitHub](https://github.com/haozhang04/LeggedSkillDeploy) | Deployment framework for multiple legged robots and policy switching |
+| Tool role | Project | Entry | Summary |
+| :--- | :--- | :--- | :--- |
+| Scene-asset generation | [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender exporter for MuJoCo heightfields, meshes, and collision bodies |
+| Multi-backend training | [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | Extends legged_gym across Isaac Gym, Genesis, and Isaac Sim |
+| Perceptive-task example | [Go2 Depth-Image Parkour](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | Go2 depth-image task example from LeggedGym-Ex |
+| Policy deployment | [LeggedSkillDeploy](development-tools/leggedskilldeploy.md) | [GitHub](https://github.com/haozhang04/LeggedSkillDeploy) | Deployment framework for multiple legged robots and policy switching |
+| Unsupervised reinforcement learning | [UFO](development-tools/ufo.md) | [GitHub](https://github.com/Roboparty/UFO) | MJLab-based humanoid unsupervised RL, motion-import, and teleoperation framework |
+| Humanoid training workflow | [TienKung-Lab](development-tools/tienkung-lab.md) | [GitHub](https://github.com/Open-X-Humanoid/TienKung-Lab) | Full-size humanoid control workflow using IsaacLab, AMP, and sensors |
+| Multi-robot training | [robot_lab](development-tools/robot-lab.md) | [GitHub](https://github.com/fan-ziqi/robot_lab) | IsaacLab reinforcement-learning extension for multiple legged and humanoid robots |
+| Simulation and hardware deployment | [rl_sar](development-tools/rl-sar.md) | [GitHub](https://github.com/fan-ziqi/rl_sar) | Bridges trained policies to Gazebo/MuJoCo simulation and real robots |
+| GPU simulation and training | [mjlab](development-tools/mjlab.md) | [GitHub](https://github.com/mujocolab/mjlab) | MuJoCo Warp GPU-accelerated robot-learning framework |
 
 ### Projects and Competition Solutions
 
-| Project | Entry | Summary |
-| :--- | :--- | :--- |
-| [Engineering Robot and Seven-Axis Dual-Arm Development](projects-and-competition/humanoid-seven-axis-arm-control.md) | [专题入口](https://bbs.robomaster.com/article/1942648?source=1) | Mechanical design, custom controllers, seven-axis control, engineering vision, and the RM2026 vehicle report |
-| [RC_WheelLeg](projects-and-competition/rc-wheelleg.md) | [GitHub](https://github.com/zeitvex/RC_WheelLeg) | HYNova wheel-legged robot project with ROS 2 and reinforcement learning |
-| [Fuzhou University 12-DOF Quadruped](projects-and-competition/fuzhou-quadruped-robot-lab.md) | [GitHub](https://github.com/Taojunfeng123/quadruped_robot_lab) | RL training code for a 12-DOF point-foot quadruped |
-| [Nanhua University HIMLOCO Quadruped](projects-and-competition/nhu-himloco-quadruped.md) | [GitHub](https://github.com/uwvwko-zzz/uw-himloco) | HIMLOCO training framework and himdog deployment code, with training support for general terrain traversal, fall recovery, and high platforms for point-foot quadrupeds, plus general terrain traversal for wheeled quadrupeds |
-| [HIMLoco for Go2W](projects-and-competition/himloco-go2w.md) | [GitHub](https://github.com/TrackinBIT/HIMLoco-for-Go2W) | Go2W Isaac Gym training and MuJoCo verification based on HIMLoco |
-| [RoboGauge Go2 Champion Solution](projects-and-competition/robogauge-go2-champion.md) | [Project Page](https://robogauge.github.io/complete/) | Robust locomotion, automated evaluation, and multi-policy deployment for Go2 |
+| Project type | Project | Entry | Summary |
+| :--- | :--- | :--- | :--- |
+| Competition robot solution | [Engineering Robot and Seven-Axis Dual-Arm Development](projects-and-competition/humanoid-seven-axis-arm-control.md) | [Topic Page](https://bbs.robomaster.com/article/1942648?source=1) | Mechanical design, custom controllers, seven-axis control, engineering vision, and the RM2026 vehicle report |
+| Integrated wheel-legged robot | [RC_WheelLeg](projects-and-competition/rc-wheelleg.md) | [GitHub](https://github.com/zeitvex/RC_WheelLeg) | HYNova wheel-legged robot project with ROS 2 and reinforcement learning |
+| Integrated quadruped project | [Fuzhou University 12-DOF Quadruped](projects-and-competition/fuzhou-quadruped-robot-lab.md) | [GitHub](https://github.com/Taojunfeng123/quadruped_robot_lab) | RL training code for a 12-DOF point-foot quadruped |
+| Integrated quadruped project | [Nanhua University HIMLOCO Quadruped](projects-and-competition/nhu-himloco-quadruped.md) | [GitHub](https://github.com/uwvwko-zzz/uw-himloco) | HIMLOCO training framework and himdog deployment code, with training support for general terrain traversal, fall recovery, and high platforms for point-foot quadrupeds, plus general terrain traversal for wheeled quadrupeds |
+| Quadruped platform adaptation | [HIMLoco for Go2W](projects-and-competition/himloco-go2w.md) | [GitHub](https://github.com/TrackinBIT/HIMLoco-for-Go2W) | Go2W Isaac Gym training and MuJoCo verification based on HIMLoco |
+| Competition champion solution | [RoboGauge Go2 Champion Solution](projects-and-competition/robogauge-go2-champion.md) | [Project Page](https://robogauge.github.io/complete/) | Robust locomotion, automated evaluation, and multi-policy deployment for Go2 |
+| Open hardware and training stack | [Unitree Qmini and RoboTamer](projects-and-competition/qmini-robotamer.md) | [Qmini](https://github.com/unitreerobotics/Qmini) | A low-cost, 3D-printable biped and software stack open-sourced by Unitree and Shandong University |
 
 ## Supplementary: Robot Hardware Open Source
 | Platform | Author/Uploader | Project | Link | One-line Description |

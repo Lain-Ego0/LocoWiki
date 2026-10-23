@@ -44,51 +44,51 @@
 
 ## 独立项目文章
 
-以下项目已整理为独立文章，按文章的主要用途分为三类。
+以下项目已整理为独立文章，按资源的主要交付物分为三类：新方法或论文复现实验归入“论文与算法复现”，可跨任务复用的训练、仿真和部署能力归入“工具与开发框架”，整机、队伍或赛事方案归入“项目与竞赛方案”。同一项目横跨多个方向时，以主要用途归类，并在文章中交叉链接相关仓库。
 
 ### 论文与算法复现
 
-| 项目 | 入口 | 简介 |
-| :--- | :--- | :--- |
-| [Extreme-RGMT 复现](paper-reproductions/extreme-rgmt-reproduction.md) | [Project Page](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) | 面向后空翻、跌倒恢复等高动态动作的人形全身控制方案 |
-| [SMP 分数匹配运动先验](paper-reproductions/smp-score-matching-motion-priors.md) | [GitHub](https://github.com/SUZ-tsinghua/smp) | 将冻结的扩散模型作为可复用运动奖励，引导 G1 学习自然动作 |
-| [AMP Go2 基础复现](paper-reproductions/amp-go2.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | Go2 AMP 训练、动作数据、Sim2Sim 和 Sim2Real 基础流程 |
-| [AMP Go2 楼梯实验](paper-reproductions/go2-amp-stairs.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | 基于 AMP 的 Go2 楼梯地形复现实验 |
-| [M20 DreamWaQ 盲爬高台](paper-reproductions/m20-dreamwaq-highplatform.md) | [GitHub](https://github.com/yusongmin1/Dreamwaq/tree/highplatform) | 通过课程学习训练 M20 不依赖视觉爬高台 |
-| [Go2 可控跳跃](paper-reproductions/go2-controllable-jump.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | 对比高加速度任务在 Isaac Gym、MuJoCo 与实物间的差异 |
-| [Go2 空翻数据采集](paper-reproductions/go2-flip-data-collection.md) | [GitHub](https://github.com/yusongmin1/go2_flip_TO) | 基于 SE(3) 全身轨迹优化生成 Go2 空翻动作数据 |
-| [Go2 Trot 步态控制](paper-reproductions/go2-trot-gait-control.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | 控制小跑步态频率与 10/20 cm 抬脚高度 |
-| [Go2 梅花桩跑酷](paper-reproductions/go2-plum-blossom-parkour.md) | [GitHub](https://github.com/jindadu00/legged_robot_competition) | 基于 Isaac Gym 的梅花桩课程学习与分层策略实验 |
-| [BFM-Zero 行为基础模型](paper-reproductions/bfm-zero.md) | [GitHub](https://github.com/LeCAR-Lab/BFM-Zero) | 可提示的人形行为基础模型，支持运动、目标和奖励推理 |
-| [TWIST](paper-reproductions/twist.md) | [GitHub](https://github.com/YanjieZe/TWIST) | Unitree G1 全身遥操作与教师-学生模仿学习系统 |
-| [GMR](paper-reproductions/gmr.md) | [GitHub](https://github.com/YanjieZe/GMR) | 面向多种人形机器人的 CPU 实时通用动作重定向器 |
-| [TWIST2](paper-reproductions/twist2.md) | [GitHub](https://github.com/amazon-far/TWIST2) | 基于 VR 的可扩展人形机器人全身数据采集系统 |
+| 细分方向 | 项目 | 入口 | 简介 |
+| :--- | :--- | :--- | :--- |
+| 人形高动态控制 | [Extreme-RGMT 复现](paper-reproductions/extreme-rgmt-reproduction.md) | [Project Page](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) | 面向后空翻、跌倒恢复等高动态动作的人形全身控制方案 |
+| 人形运动先验 | [SMP 分数匹配运动先验](paper-reproductions/smp-score-matching-motion-priors.md) | [GitHub](https://github.com/SUZ-tsinghua/smp) | 将冻结的扩散模型作为可复用运动奖励，引导 G1 学习自然动作 |
+| 四足模仿学习 | [AMP Go2 基础复现](paper-reproductions/amp-go2.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | Go2 AMP 训练、动作数据、Sim2Sim 和 Sim2Real 基础流程 |
+| 四足模仿学习 | [AMP Go2 楼梯实验](paper-reproductions/go2-amp-stairs.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | 基于 AMP 的 Go2 楼梯地形复现实验 |
+| 四足运动控制 | [M20 DreamWaQ 盲爬高台](paper-reproductions/m20-dreamwaq-highplatform.md) | [GitHub](https://github.com/yusongmin1/Dreamwaq/tree/highplatform) | 通过课程学习训练 M20 不依赖视觉爬高台 |
+| 四足运动控制 | [Go2 可控跳跃](paper-reproductions/go2-controllable-jump.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | 对比高加速度任务在 Isaac Gym、MuJoCo 与实物间的差异 |
+| 轨迹优化与数据生成 | [Go2 空翻数据采集](paper-reproductions/go2-flip-data-collection.md) | [GitHub](https://github.com/yusongmin1/go2_flip_TO) | 基于 SE(3) 全身轨迹优化生成 Go2 空翻动作数据 |
+| 四足运动控制 | [Go2 Trot 步态控制](paper-reproductions/go2-trot-gait-control.md) | [GitHub](https://github.com/yusongmin1/My_unitree_go2_gym) | 控制小跑步态频率与 10/20 cm 抬脚高度 |
+| 四足跑酷 | [Go2 梅花桩跑酷](paper-reproductions/go2-plum-blossom-parkour.md) | [GitHub](https://github.com/jindadu00/legged_robot_competition) | 基于 Isaac Gym 的梅花桩课程学习与分层策略实验 |
+| 行为基础模型 | [BFM-Zero 行为基础模型](paper-reproductions/bfm-zero.md) | [GitHub](https://github.com/LeCAR-Lab/BFM-Zero) | 可提示的人形行为基础模型，支持运动、目标和奖励推理 |
+| 全身遥操作与模仿学习 | [TWIST](paper-reproductions/twist.md) | [GitHub](https://github.com/YanjieZe/TWIST) | Unitree G1 全身遥操作与教师-学生模仿学习系统 |
+| 动作重定向 | [GMR](paper-reproductions/gmr.md) | [GitHub](https://github.com/YanjieZe/GMR) | 面向多种人形机器人的 CPU 实时通用动作重定向器 |
+| 遥操作与数据采集 | [TWIST2](paper-reproductions/twist2.md) | [GitHub](https://github.com/amazon-far/TWIST2) | 基于 VR 的可扩展人形机器人全身数据采集系统 |
 
 ### 工具与开发框架
 
-| 项目 | 入口 | 简介 |
-| :--- | :--- | :--- |
-| [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender 到 MuJoCo height field、网格和碰撞体导出工具 |
-| [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | 将 legged_gym 扩展到 Isaac Gym、Genesis 和 Isaac Sim |
-| [Go2 深度图跑酷](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | LeggedGym-Ex 中的 Go2 深度图任务示例 |
-| [LeggedSkillDeploy](development-tools/leggedskilldeploy.md) | [GitHub](https://github.com/haozhang04/LeggedSkillDeploy) | 面向多种腿足机器人和多策略切换的部署框架 |
-| [UFO 人形无监督强化学习](development-tools/ufo.md) | [GitHub](https://github.com/Roboparty/UFO) | 基于 MJLab 的人形无监督强化学习、动作导入与遥操作框架 |
-| [TienKung-Lab](development-tools/tienkung-lab.md) | [GitHub](https://github.com/Open-X-Humanoid/TienKung-Lab) | 基于 IsaacLab、AMP 和传感器的全尺寸人形控制工作流 |
-| [robot_lab](development-tools/robot-lab.md) | [GitHub](https://github.com/fan-ziqi/robot_lab) | 面向多种足式/人形机器人的 IsaacLab 强化学习扩展库 |
-| [rl_sar](development-tools/rl-sar.md) | [GitHub](https://github.com/fan-ziqi/rl_sar) | 连接训练策略、Gazebo/MuJoCo 仿真与真机部署的框架 |
-| [mjlab](development-tools/mjlab.md) | [GitHub](https://github.com/mujocolab/mjlab) | MuJoCo Warp GPU 加速的机器人学习框架 |
+| 工具角色 | 项目 | 入口 | 简介 |
+| :--- | :--- | :--- | :--- |
+| 场景资产生成 | [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender 到 MuJoCo height field、网格和碰撞体导出工具 |
+| 多后端训练框架 | [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | 将 legged_gym 扩展到 Isaac Gym、Genesis 和 Isaac Sim |
+| 感知任务示例 | [Go2 深度图跑酷](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | LeggedGym-Ex 中的 Go2 深度图任务示例 |
+| 策略部署 | [LeggedSkillDeploy](development-tools/leggedskilldeploy.md) | [GitHub](https://github.com/haozhang04/LeggedSkillDeploy) | 面向多种腿足机器人和多策略切换的部署框架 |
+| 无监督强化学习 | [UFO 人形无监督强化学习](development-tools/ufo.md) | [GitHub](https://github.com/Roboparty/UFO) | 基于 MJLab 的人形无监督强化学习、动作导入与遥操作框架 |
+| 人形训练工作流 | [TienKung-Lab](development-tools/tienkung-lab.md) | [GitHub](https://github.com/Open-X-Humanoid/TienKung-Lab) | 基于 IsaacLab、AMP 和传感器的全尺寸人形控制工作流 |
+| 多机器人训练框架 | [robot_lab](development-tools/robot-lab.md) | [GitHub](https://github.com/fan-ziqi/robot_lab) | 面向多种足式/人形机器人的 IsaacLab 强化学习扩展库 |
+| 仿真与真机部署 | [rl_sar](development-tools/rl-sar.md) | [GitHub](https://github.com/fan-ziqi/rl_sar) | 连接训练策略、Gazebo/MuJoCo 仿真与真机部署的框架 |
+| GPU 仿真与训练 | [mjlab](development-tools/mjlab.md) | [GitHub](https://github.com/mujocolab/mjlab) | MuJoCo Warp GPU 加速的机器人学习框架 |
 
 ### 项目与竞赛方案
 
-| 项目 | 入口 | 简介 |
-| :--- | :--- | :--- |
-| [工程机器人整车研发与七轴双臂控制](projects-and-competition/humanoid-seven-axis-arm-control.md) | [专题入口](https://bbs.robomaster.com/article/1942648?source=1) | 覆盖机械设计、自定义控制器、七轴双臂控制、工程视觉和 RM2026 整车技术报告 |
-| [RC_WheelLeg](projects-and-competition/rc-wheelleg.md) | [GitHub](https://github.com/zeitvex/RC_WheelLeg) | HYNova 战队的轮足机器人、ROS 2 和强化学习项目 |
-| [福州大学浮舟湿地点足 12DOF](projects-and-competition/fuzhou-quadruped-robot-lab.md) | [GitHub](https://github.com/Taojunfeng123/quadruped_robot_lab) | 点足 12DOF 四足机器人的 RL 训练代码 |
-| [南华大学衡山Π串联四足](projects-and-competition/nhu-himloco-quadruped.md) | [GitHub](https://github.com/uwvwko-zzz/uw-himloco) | HIMLOCO 训练框架与 himdog 部署代码，目前该训练框架包含点足的通用地形，倾倒恢复，高台和轮足的通用地形 |
-| [HIMLoco for Go2W](projects-and-competition/himloco-go2w.md) | [GitHub](https://github.com/TrackinBIT/HIMLoco-for-Go2W) | 基于 HIMLoco 的 Go2W Isaac Gym 训练和 MuJoCo 验证 |
-| [RoboGauge Go2 冠军方案](projects-and-competition/robogauge-go2-champion.md) | [Project Page](https://robogauge.github.io/complete/) | Go2 高鲁棒运动控制、自动评测和多策略部署方案 |
-| [Unitree Qmini 与 RoboTamer](projects-and-competition/qmini-robotamer.md) | [Qmini](https://github.com/unitreerobotics/Qmini) | 宇树与山东大学联合开源的可 3D 打印低成本双足机器人及软件栈 |
+| 项目类型 | 项目 | 入口 | 简介 |
+| :--- | :--- | :--- | :--- |
+| 竞赛整车方案 | [工程机器人整车研发与七轴双臂控制](projects-and-competition/humanoid-seven-axis-arm-control.md) | [专题入口](https://bbs.robomaster.com/article/1942648?source=1) | 覆盖机械设计、自定义控制器、七轴双臂控制、工程视觉和 RM2026 整车技术报告 |
+| 轮足整机项目 | [RC_WheelLeg](projects-and-competition/rc-wheelleg.md) | [GitHub](https://github.com/zeitvex/RC_WheelLeg) | HYNova 战队的轮足机器人、ROS 2 和强化学习项目 |
+| 四足整机项目 | [福州大学浮舟湿地点足 12DOF](projects-and-competition/fuzhou-quadruped-robot-lab.md) | [GitHub](https://github.com/Taojunfeng123/quadruped_robot_lab) | 点足 12DOF 四足机器人的 RL 训练代码 |
+| 四足整机项目 | [南华大学衡山Π串联四足](projects-and-competition/nhu-himloco-quadruped.md) | [GitHub](https://github.com/uwvwko-zzz/uw-himloco) | HIMLOCO 训练框架与 himdog 部署代码，目前该训练框架包含点足的通用地形，倾倒恢复，高台和轮足的通用地形 |
+| 四足平台适配 | [HIMLoco for Go2W](projects-and-competition/himloco-go2w.md) | [GitHub](https://github.com/TrackinBIT/HIMLoco-for-Go2W) | 基于 HIMLoco 的 Go2W Isaac Gym 训练和 MuJoCo 验证 |
+| 竞赛冠军方案 | [RoboGauge Go2 冠军方案](projects-and-competition/robogauge-go2-champion.md) | [Project Page](https://robogauge.github.io/complete/) | Go2 高鲁棒运动控制、自动评测和多策略部署方案 |
+| 开源硬件与训练栈 | [Unitree Qmini 与 RoboTamer](projects-and-competition/qmini-robotamer.md) | [Qmini](https://github.com/unitreerobotics/Qmini) | 宇树与山东大学联合开源的可 3D 打印低成本双足机器人及软件栈 |
 
 ## 补充：机器人硬件与实物开源
 | 平台 | 作者/上传者 | 项目 | 链接 | 一句话简介 |

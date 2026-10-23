@@ -12,6 +12,7 @@
   - [KAIST](#kaist)
   - [其他代表作](#other-works)
   - [人形](#humanoids)
+  - [框架与工具](#frameworks)
   - [综述](#surveys)
   - [其他资料（暂无笔记）](#misc)
 
@@ -95,7 +96,7 @@ python3 scripts/resolve_paper_links.py --update-index
 - Visual Whole-Body Control for Legged Loco-Manipulation（CoRL 2024）— [原文 PDF](https://arxiv.org/pdf/2403.16967.pdf)
 - Curiosity-Driven Learning of Joint Locomotion and Manipulation Tasks（CoRL 2023）— [原文 PDF](https://proceedings.mlr.press/v229/schwarke23a/schwarke23a.pdf)（PMLR 开放获取）
 
-### 人形（Whole-Body / Teleop / Getting-Up / 生成）
+### 人形（Whole-Body / 行为基础模型 / Teleop / Retargeting / 数据采集 / Getting-Up / 生成）
 - Perpetual Humanoid Control for Real-time Simulated Avatars（ICCV 2023）— [原文 PDF](https://arxiv.org/pdf/2305.06456.pdf)
 - Expressive Whole-Body Control for Humanoid Robots（RSS 2024）— [原文 PDF](https://arxiv.org/pdf/2402.16796.pdf)
 - ExBody2: Advanced Expressive Humanoid Whole-Body Control（2024）— [原文 PDF](https://arxiv.org/pdf/2412.13196.pdf)
@@ -106,9 +107,16 @@ python3 scripts/resolve_paper_links.py --update-index
 - Learning Humanoid Standing-up Control across Diverse Postures（RSS 2025）— [原文 PDF](https://arxiv.org/pdf/2502.08378)
 - Learning Getting-Up Policies for Real-World Humanoid Robots（RSS 2025）— [原文 PDF](https://arxiv.org/pdf/2502.12152)
 - BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion（2025）— [原文 PDF](https://arxiv.org/pdf/2508.08241)
+- BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning（2025）— [原文 PDF](https://arxiv.org/pdf/2511.04131.pdf)
+- TWIST: Teleoperated Whole-Body Imitation System（CoRL 2025）— [原文 PDF](https://arxiv.org/pdf/2505.02833.pdf)
+- Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking（ICRA 2026）— [原文 PDF](https://arxiv.org/pdf/2510.02252.pdf)
+- TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System（2025）— [原文 PDF](https://arxiv.org/pdf/2511.02832.pdf)
 - Global-Local Attention Decomposition for Terrain Encoding in Humanoid Perceptive Locomotion（arXiv 2026）— [原文页面](https://arxiv.org/abs/2606.00637)
 - Extreme-RGMT: Continual Learning of Highly Dynamic Skills for Robust Generalist Humanoid Control（arXiv 2026）— [原文页面](https://arxiv.org/abs/2607.20110)
 - PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control（2026）— [原文 PDF](https://arxiv.org/pdf/2609.24840.pdf)
+
+### 仿真 / 机器人学习框架
+- mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning（2026）— [原文 PDF](https://arxiv.org/pdf/2601.22074.pdf)
 
 ### 硬件 / 机构
 - A Low Cost Modular Actuator for Dynamic Robots — [原文 PDF](https://dspace.mit.edu/handle/1721.1/118671)
@@ -246,7 +254,7 @@ python3 scripts/resolve_paper_links.py --update-index
 - 原文 PDF： [原文链接](https://arxiv.org/pdf/2104.02180.pdf) - 笔记：非足式机器人论文，但框架迁移价值高：用 GAN 作为隐式 metric 获得风格引导奖励学习控制策略（UCB）。
 
 <a id="humanoids" name="humanoids"></a>
-### 人形（Whole-Body Control / Teleop / Getting-Up 等）
+### 人形（Whole-Body Control / 行为基础模型 / Teleop / Retargeting / 数据采集 / Getting-Up 等）
 
 #### Perpetual Humanoid Control for Real-time Simulated Avatars（ICCV 2023）
 - 原文 PDF： https://arxiv.org/pdf/2305.06456.pdf
@@ -309,9 +317,37 @@ python3 scripts/resolve_paper_links.py --update-index
 #### PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control（arXiv 2026）
 - 原文页面： [原文链接](https://arxiv.org/abs/2609.24840) - 笔记：动作扩散策略直接生成可执行动作，并预测未来状态轨迹以支持文本条件和测试时目标引导；在 Unitree G1 上完成实机验证。
 
+#### BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning（2025）
+- 原文 PDF：https://arxiv.org/pdf/2511.04131.pdf
+- 笔记：使用 Forward-Backward 无监督强化学习构造共享潜变量空间，使同一 G1 策略可接受运动、目标或奖励提示，完成零样本推理和少样本优化适配。
+- 开源项目：[BFM-Zero](../network-open-source/paper-reproductions/bfm-zero.md)
+
+#### TWIST: Teleoperated Whole-Body Imitation System（CoRL 2025）
+- 原文 PDF：https://arxiv.org/pdf/2505.02833.pdf
+- 笔记：通过动作重定向与 RL+BC 教师-学生训练实现 G1 全身遥操作，单一控制器覆盖移动、全身操作和表现性动作。
+- 开源项目：[TWIST](../network-open-source/paper-reproductions/twist.md)
+
+#### Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking（ICRA 2026）
+- 原文 PDF：https://arxiv.org/pdf/2510.02252.pdf
+- 笔记：把重定向质量作为运动跟踪策略性能的关键变量进行系统对比，并提出 GMR；在减少奖励工程的设置下，其鲁棒性和动作保真度优于其他开源方法。
+- 开源项目：[GMR](../network-open-source/paper-reproductions/gmr.md)
+
+#### TWIST2: Scalable, Portable, and Holistic Humanoid Data Collection System（2025）
+- 原文 PDF：https://arxiv.org/pdf/2511.02832.pdf
+- 笔记：使用 PICO VR 构建便携、无光学动捕的全身遥操作与数据采集系统，并利用第一视角数据训练分层视觉运动策略。
+- 开源项目：[TWIST2](../network-open-source/paper-reproductions/twist2.md)
+
 #### PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control（2026）
 - 原文 PDF： https://arxiv.org/pdf/2609.24840.pdf
 - 笔记：联合预测可执行动作与内部未来状态轨迹，仅使用本体感知，将文本条件生成和测试时状态目标引导统一到单一闭环策略中，无需独立运动跟踪器或特权全身状态。在 Jetson Orin NX 上满足 20 ms 控制周期，并在 Unitree G1 上实现文本指令、摇杆控制、语义插值和扰动响应。
+
+<a id="frameworks" name="frameworks"></a>
+### 框架与工具
+
+#### mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning（2026）
+- 原文 PDF：https://arxiv.org/pdf/2601.22074.pdf
+- 笔记：将 Isaac Lab 的 manager-based API 与 MuJoCo Warp GPU 仿真结合，提供轻量、可组合的训练环境以及速度跟踪、运动模仿和操作参考任务。
+- 开源项目：[mjlab](../network-open-source/development-tools/mjlab.md)
 
 <a id="surveys" name="surveys"></a>
 ### 综述
