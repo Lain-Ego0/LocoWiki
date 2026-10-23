@@ -19,6 +19,9 @@ concurrency:
 
 jobs:
   notify-site:
+    # 只在组织仓库运行：个人 fork 没有 LOCO_WIKI_SITE_DISPATCH_TOKEN，
+    # 而 fork 的 main 会被自动镜像同步，若不跳过就会每次同步都失败并刷邮件。
+    if: github.repository == 'LocoWiki/LocoWiki'
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch website index refresh
