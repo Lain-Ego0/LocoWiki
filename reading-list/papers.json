@@ -565,5 +565,14 @@
     "notes": "提出面向通用人形控制的持续学习框架：先训练多源动作的通用运动跟踪策略，再通过难度感知采样和能力巩固学习高动态技能，同时限制已掌握能力的退化；支持后空翻等动作。",
     "query": "Extreme-RGMT Continual Learning of Highly Dynamic Skills for Robust Generalist Humanoid Control 2607.20110",
     "url": "https://arxiv.org/abs/2607.20110"
+  },
+  {
+    "group": "人形",
+    "title": "SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model",
+    "venue": "CoRL",
+    "year": 2026,
+    "notes": "提出用一个可微世界模型摊销大规模人形全身动作跟踪：世界模型从仿真日志拟合，与策略联合训练，并通过短视野 imagined rollout 的 BPTT 提供解析梯度。论文在 Unitree G1 上覆盖 LAFAN1 与 BONES-SEED 约 12.95 万条动作，报告单卡 3 小时超过 128 卡 7 天基线；官方训练代码尚未公开，社区已有两份复现。",
+    "query": "SuperMimic Scaling Humanoid Whole-Body Control with One Differentiable World Model 2610.28480",
+    "url": "https://arxiv.org/abs/2610.28480"
   }
 ]

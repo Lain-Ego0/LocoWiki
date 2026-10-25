@@ -107,6 +107,7 @@ python3 scripts/resolve_paper_links.py --update-index
 - Learning Humanoid Standing-up Control across Diverse Postures（RSS 2025）— [原文 PDF](https://arxiv.org/pdf/2502.08378)
 - Learning Getting-Up Policies for Real-World Humanoid Robots（RSS 2025）— [原文 PDF](https://arxiv.org/pdf/2502.12152)
 - BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion（2025）— [原文 PDF](https://arxiv.org/pdf/2508.08241)
+- SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model（CoRL 2026）— [原文页面](https://arxiv.org/abs/2610.28480)
 - BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning（2025）— [原文 PDF](https://arxiv.org/pdf/2511.04131.pdf)
 - TWIST: Teleoperated Whole-Body Imitation System（CoRL 2025）— [原文 PDF](https://arxiv.org/pdf/2505.02833.pdf)
 - Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking（ICRA 2026）— [原文 PDF](https://arxiv.org/pdf/2510.02252.pdf)
@@ -286,6 +287,10 @@ python3 scripts/resolve_paper_links.py --update-index
 
 #### BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion（2025）
 - 原文 PDF： [原文链接](https://arxiv.org/pdf/2508.08241) - 笔记：高质量 motion tracking + guided diffusion：测试时可用简单 cost functions 做 task-specific control（Berkeley/Stanford）。
+
+#### SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model（CoRL 2026）
+- 原文页面： [原文链接](https://arxiv.org/abs/2610.28480) - 笔记：用一个可微世界模型摊销大规模人形全身动作跟踪：世界模型从仿真日志拟合，与策略联合训练，并通过短视野 imagined rollout 的 BPTT 提供解析梯度。论文在 Unitree G1 上覆盖 LAFAN1 与 BONES-SEED 约 12.95 万条动作，报告单卡 3 小时超过 128 卡 7 天基线。
+- 开源复现：[SuperMimic 两份复现](../network-open-source/paper-reproductions/supermimic.md)
 
 #### Trajectory-Level Automatic Curriculum Learning for Legged Locomotion on Unstructured Terrain（arXiv 2026）
 - 原文页面： [原文链接](https://arxiv.org/abs/2608.16164) - 笔记：直接从非结构化地形图生成轨迹级课程；评估器学习任务难度，采样器根据策略能力持续提出下一轮训练轨迹。

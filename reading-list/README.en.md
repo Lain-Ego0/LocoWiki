@@ -106,6 +106,7 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 - Learning Humanoid Standing-up Control across Diverse Postures (RSS 2025) — [Original PDF](https://arxiv.org/pdf/2502.08378)
 - Learning Getting-Up Policies for Real-World Humanoid Robots (RSS 2025) — [Original PDF](https://arxiv.org/pdf/2502.12152)
 - BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion (2025) — [Original PDF](https://arxiv.org/pdf/2508.08241)
+- SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model (CoRL 2026) — [Original page](https://arxiv.org/abs/2610.28480)
 - BFM-Zero: A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning (2025) — [Original PDF](https://arxiv.org/pdf/2511.04131.pdf)
 - TWIST: Teleoperated Whole-Body Imitation System (CoRL 2025) — [Original PDF](https://arxiv.org/pdf/2505.02833.pdf)
 - Retargeting Matters: General Motion Retargeting for Humanoid Motion Tracking (ICRA 2026) — [Original PDF](https://arxiv.org/pdf/2510.02252.pdf)
@@ -285,6 +286,10 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 
 #### BeyondMimic: From Motion Tracking to Versatile Humanoid Control via Guided Diffusion (2025)
 - Original PDF: [Original source](https://arxiv.org/pdf/2508.08241) - Notes: High-quality motion tracking plus guided diffusion; supports test-time task-specific control using simple cost functions (Berkeley/Stanford).
+
+#### SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model (CoRL 2026)
+- Original page: [Original source](https://arxiv.org/abs/2610.28480) - Notes: Uses one differentiable world model to amortize large-scale humanoid whole-body motion tracking. The model is fit from simulator logs, trained jointly with the policy, and provides analytic gradients through BPTT over short imagined rollouts. Evaluated on Unitree G1 with LAFAN1 and ~129.5k BONES-SEED motions; reports surpassing a 128-GPU, 7-day baseline with 3 GPU-hours on one GPU.
+- Open-source reproductions: [SuperMimic reproductions](../network-open-source/paper-reproductions/supermimic.md)
 
 #### Trajectory-Level Automatic Curriculum Learning for Legged Locomotion on Unstructured Terrain (arXiv 2026)
 - Original page: [Original source](https://arxiv.org/abs/2608.16164) - Notes: Generates trajectory-level curricula directly from unstructured terrain maps; an evaluator scores task difficulty and a sampler proposes tasks matched to policy capability.

@@ -52,6 +52,7 @@
 | :--- | :--- | :--- | :--- |
 | 人形高动态控制 | [Extreme-RGMT 复现](paper-reproductions/extreme-rgmt-reproduction.md) | [Project Page](https://zeonsunlightyu.github.io/Extreme-RGMT.github.io/) | 面向后空翻、跌倒恢复等高动态动作的人形全身控制方案 |
 | 人形运动先验 | [SMP 分数匹配运动先验](paper-reproductions/smp-score-matching-motion-priors.md) | [GitHub](https://github.com/SUZ-tsinghua/smp) | 将冻结的扩散模型作为可复用运动奖励，引导 G1 学习自然动作 |
+| 人形运动跟踪 | [SuperMimic 复现](paper-reproductions/supermimic.md) | [mjlab 版](https://github.com/CuboiLeo/SuperMimic-Reproduced) · [Isaac Lab 3 版](https://github.com/zita-ch/supermimic_vibed) | 可微世界模型 + BPTT 的 G1 全身动作跟踪，两份独立复现 |
 | 四足模仿学习 | [AMP Go2 基础复现](paper-reproductions/amp-go2.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | Go2 AMP 训练、动作数据、Sim2Sim 和 Sim2Real 基础流程 |
 | 四足模仿学习 | [AMP Go2 楼梯实验](paper-reproductions/go2-amp-stairs.md) | [GitHub](https://github.com/ak1raljl/amp_go2) | 基于 AMP 的 Go2 楼梯地形复现实验 |
 | 四足运动控制 | [M20 DreamWaQ 盲爬高台](paper-reproductions/m20-dreamwaq-highplatform.md) | [GitHub](https://github.com/yusongmin1/Dreamwaq/tree/highplatform) | 通过课程学习训练 M20 不依赖视觉爬高台 |
