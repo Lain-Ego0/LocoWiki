@@ -574,5 +574,14 @@
     "notes": "提出用一个可微世界模型摊销大规模人形全身动作跟踪：世界模型从仿真日志拟合，与策略联合训练，并通过短视野 imagined rollout 的 BPTT 提供解析梯度。论文在 Unitree G1 上覆盖 LAFAN1 与 BONES-SEED 约 12.95 万条动作，报告单卡 3 小时超过 128 卡 7 天基线；官方训练代码尚未公开，社区已有两份复现。",
     "query": "SuperMimic Scaling Humanoid Whole-Body Control with One Differentiable World Model 2610.28480",
     "url": "https://arxiv.org/abs/2610.28480"
+  },
+  {
+    "group": "框架与工具",
+    "title": "Draft: A Parametric Tool for Robot Design Exploration",
+    "venue": "arXiv",
+    "year": 2026,
+    "notes": "把参数表、运动学树和根网格直接编译为 MuJoCo MJCF：论文报告 12 自由度四足约 50 ms、29 自由度人形约 202 ms；用 114 个集成执行器和 49 份机器人描述拟合质量、减速比、体积和转子惯量趋势，并做可制造性筛选。四台现成机器人孪生模型的质量几何平均倍误差为 1.10×，并用同一两阶段强化学习课程比较三台四足设计。",
+    "query": "Draft A Parametric Tool for Robot Design Exploration 2609.38405",
+    "url": "https://arxiv.org/abs/2609.38405"
   }
 ]

@@ -118,6 +118,7 @@ python3 scripts/resolve_paper_links.py --update-index
 
 ### 仿真 / 机器人学习框架
 - mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning（2026）— [原文 PDF](https://arxiv.org/pdf/2601.22074.pdf)
+- Draft: A Parametric Tool for Robot Design Exploration（arXiv 2026）— [原文页面](https://arxiv.org/abs/2609.38405)
 
 ### 硬件 / 机构
 - A Low Cost Modular Actuator for Dynamic Robots — [原文 PDF](https://dspace.mit.edu/handle/1721.1/118671)
@@ -353,6 +354,17 @@ python3 scripts/resolve_paper_links.py --update-index
 - 原文 PDF：https://arxiv.org/pdf/2601.22074.pdf
 - 笔记：将 Isaac Lab 的 manager-based API 与 MuJoCo Warp GPU 仿真结合，提供轻量、可组合的训练环境以及速度跟踪、运动模仿和操作参考任务。
 - 开源项目：[mjlab](../network-open-source/development-tools/mjlab.md)
+
+#### Draft: A Parametric Tool for Robot Design Exploration（arXiv 2026）
+- 原文页面：[原文链接](https://arxiv.org/abs/2609.38405)
+- 作者/单位：David Nguyen、Marcelo Coelho、Sangbae Kim（MIT）
+- 开源项目：[Draft](../network-open-source/development-tools/draft.md)
+
+**论文综述**：针对“CAD 一改就要重新导出仿真模型，形态与控制难以共同迭代”的问题，论文提出参数化生成器 Draft。与已有 co-design 方法相比，Draft 不绑定某个优化器或固定机型，而是把通用编译、真实硬件趋势和可制造性过滤放进同一条生成流程。机器人由参数表、带算术表达式的运动学树和根网格三部分描述；生成器不内置固定 body plan，可把任意串联链树编译为 MJCF。连杆由 basic、sphere、foot、root 四类基元拼装，尺寸修改会自动传导到视觉、碰撞和惯性属性，关节用峰值扭矩与空载转速约束的 DC 电机模型。作者强调生成器只保证模型自洽，不保证设计可制造，因此又调查了 114 个集成执行器（33 QDD、33 MidGear、48 High GR）和 118 份公开机器人描述（保留 29 人形、20 四足），用留一法拟合质量、减速比、体积、长径比、转子惯量及分连杆类别的结构质量趋势，并编译成设计过滤器，拒绝超出目录极值的设计。
+
+**实验**：作者先用厂商几何和关节能力重建四台 Unitree 商用机器人（G1、H2、Go2、B2），不输入任何质量、密度或惯量；孪生质量分别为原机的 111%、91%、101%、84%，几何平均倍误差 1.10×，并在 300 个构型上比较关节空间质量矩阵与重力项。随后生成 33 kg Cheetah、110 kg Bear、91 kg Giraffe 三台四足，在 mjlab 中用 PPO、10 个随机种子和 Froude 相似缩放的两阶段课程训练。三台机器人在速度、台阶高度、抗推能力和传动效率上呈现不同取舍，没有绝对最优；按腿长归一化后排名还会变化，说明设计权衡依赖评价尺度。惯性误差消融不改变能力排序。
+
+**结论与局限**：Draft 把“改参数→得到可训练 MJCF”压缩到毫秒级（12 自由度四足约 50 ms，29 自由度人形约 202 ms），适合早期设计空间探索和相对比较；但它是中等保真模型，不含设计优化器，不支持并联机构，执行器目录也只覆盖集成模块（结果更接近保守基线）。孪生实验的关节空间质量矩阵中位误差约 13%–34%，因此它更适合回答“哪个设计方向更有希望”，而不是替代 CAD 或样机验证。
 
 <a id="surveys" name="surveys"></a>
 ### 综述

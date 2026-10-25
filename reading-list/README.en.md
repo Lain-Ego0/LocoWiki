@@ -117,6 +117,7 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 
 ### Simulation / Robot-Learning Frameworks
 - mjlab: A Lightweight Framework for GPU-Accelerated Robot Learning (2026) — [Original PDF](https://arxiv.org/pdf/2601.22074.pdf)
+- Draft: A Parametric Tool for Robot Design Exploration (arXiv 2026) — [Original page](https://arxiv.org/abs/2609.38405)
 
 ### Hardware
 - A Low Cost Modular Actuator for Dynamic Robots — [Original PDF](https://dspace.mit.edu/handle/1721.1/118671)
@@ -352,6 +353,17 @@ Note: this is a quick index; for short notes/introductions, see “Notes by Lab/
 - Original PDF: https://arxiv.org/pdf/2601.22074.pdf
 - Notes: Combines Isaac Lab's manager-based API with MuJoCo Warp GPU simulation, providing lightweight, composable environments and reference tasks for velocity tracking, motion imitation, and manipulation.
 - Open-source project: [mjlab](../network-open-source/development-tools/mjlab.md)
+
+#### Draft: A Parametric Tool for Robot Design Exploration (arXiv 2026)
+- Original page: [Original source](https://arxiv.org/abs/2609.38405)
+- Authors/Affiliation: David Nguyen, Marcelo Coelho, Sangbae Kim (MIT)
+- Open-source project: [Draft](../network-open-source/development-tools/draft.md)
+
+**Review**: The paper addresses the CAD-to-simulation bottleneck: every CAD change must be re-exported as a robot description before control work can begin, so morphology and control are hard to iterate together. Compared with existing co-design pipelines, Draft does not bind the generator to a particular optimizer or fixed platform; it combines a general compiler, hardware-grounded trends, and a feasibility filter in one generation pipeline. Draft takes a parameter table, an expression-bearing kinematic tree, and a root mesh, and compiles any tree of serial chains into MJCF without a fixed body plan. Links are assembled from basic, sphere, foot, and root primitives; dimensional edits propagate to visual, collision, and inertial properties, and joints follow a DC-motor model bounded by peak torque and no-load speed. Because the generator only guarantees internal consistency, the authors survey 114 integrated actuators (33 QDD, 33 MidGear, 48 High GR) and 118 published robot descriptions (29 humanoids and 20 quadrupeds retained), fit mass, gear ratio, volume, aspect ratio, rotor inertia, and per-link structural mass trends with leave-one-out validation, and compile the fits into a design filter that rejects designs outside actuator-catalogue extremes.
+
+**Experiments**: The authors rebuild four commercial Unitree robots (G1, H2, Go2, B2) from vendor geometry and joint capabilities without supplying mass, density, or inertia. Twin masses are 111%, 91%, 101%, and 84% of the originals (1.10× geometric-mean fold error), and the paper compares joint-space mass matrices and gravity vectors over 300 configurations. Three quadrupeds (33 kg Cheetah, 110 kg Bear, 91 kg Giraffe) are then trained in mjlab with PPO, ten seeds, and a two-stage curriculum using Froude-similarity scaling. The three designs trade off speed, step height, push recovery, and drivetrain efficiency; no design dominates, and the ranking changes after normalization by leg length, showing that the tradeoffs depend on the evaluation scale. An inertia-error ablation does not change the capability trends.
+
+**Conclusion and limitations**: Draft reduces "edit parameters → obtain a trainable MJCF" to milliseconds (about 50 ms for a 12-joint quadruped and 202 ms for a 29-joint humanoid), making it useful for early design-space exploration and relative comparisons. It is a medium-fidelity model, however: it has no design optimizer, does not support parallel mechanisms, and its actuator catalogue covers only integrated modules (a conservative baseline). Median joint-space mass-matrix error in the twins is about 13–34%, so Draft is better suited to asking which design direction is promising than to replacing CAD or prototype validation.
 
 <a id="surveys" name="surveys"></a>
 ### Surveys

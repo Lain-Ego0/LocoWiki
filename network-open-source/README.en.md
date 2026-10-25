@@ -67,6 +67,7 @@ Project articles are grouped by their main deliverable: new methods and reproduc
 
 | Tool role | Project | Entry | Summary |
 | :--- | :--- | :--- | :--- |
+| Robot design and model generation | [Draft](development-tools/draft.md) | [GitHub](https://github.com/davidhnguyen2000/draft) | Compiles parameter tables and kinematic trees into MuJoCo MJCF, grounding mass, actuator, and inertia values in hardware trends |
 | Scene-asset generation | [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender exporter for MuJoCo heightfields, meshes, and collision bodies |
 | Multi-backend training | [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | Extends legged_gym across Isaac Gym, Genesis, and Isaac Sim |
 | Perceptive-task example | [Go2 Depth-Image Parkour](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | Go2 depth-image task example from LeggedGym-Ex |

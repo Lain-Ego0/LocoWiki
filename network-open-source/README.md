@@ -69,6 +69,7 @@
 
 | 工具角色 | 项目 | 入口 | 简介 |
 | :--- | :--- | :--- | :--- |
+| 机器人设计与模型生成 | [Draft](development-tools/draft.md) | [GitHub](https://github.com/davidhnguyen2000/draft) | 将参数表与运动学树编译为 MuJoCo MJCF，并用真实硬件趋势补全质量、电机与惯量 |
 | 场景资产生成 | [blender-mujoco-terrain](development-tools/blender-mujoco-hfield.md) | [GitHub](https://github.com/Eterith/blender-mujoco-hfield/tree/main) | Blender 到 MuJoCo height field、网格和碰撞体导出工具 |
 | 多后端训练框架 | [LeggedGym-Ex](development-tools/leggedgym-ex.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex) | 将 legged_gym 扩展到 Isaac Gym、Genesis 和 Isaac Sim |
 | 感知任务示例 | [Go2 深度图跑酷](development-tools/go2-depth-parkour.md) | [GitHub](https://github.com/lupinjia/LeggedGym-Ex/tree/main/legged_gym/envs/go2/go2_ts_depth) | LeggedGym-Ex 中的 Go2 深度图任务示例 |
